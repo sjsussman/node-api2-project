@@ -1,14 +1,6 @@
-const express = require('express')
-
-const postsRoutes = require('./data/postsRoutes')
-const server = express();
-
-server.use('/posts', postsRoutes);
-
-server.use('/', (req, res) => {
-    res.status(200).send('Hello from the home page!')
-});
+const server = require('./server')
 
 server.listen(8000, () => {
-    console.log('Server is listening on PORT 8000')
+    console.log('\n*** Server Running on http://localhost:8000 ***\n');
 })
+
